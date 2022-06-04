@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/headerFooter.css">
+
+    <title>Log In</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"> <img src="../img/logo (3).png" alt="logo" id="logo">
+        </a>
+        <i class="fa fa-bars" onclick="showMenu()" id="show"></i>
+        <i class="fa fa-bars" onclick="hideMenu()" id="hide"></i>
+        <div class="nav-lists" id="navLinks">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Courses <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="oop.html">OOP</a></li>
+                        <li><a href="java.html">JAVA</a></li>
+                        <li><a href="toc.html">TOC</a></li>
+                        <li><a href="js.html">JavaScript</a></li>
+                        <li><a href="ml.html">ML</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrap">
+        <div class="container">
+            <div class="header">
+                <h1>Log In</h1>
+            </div>
+            <form action="#" method="post" onsubmit="return loginValidation()">
+                <table>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: end;">
+                            <i class="err-icon fas fa-exclamation-circle" id="eei"></i>
+                            <small id="eemail"></small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">Password</label></td>
+                        <td><input type="password" name="pass" id="pass"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: end;">
+                            <i class="err-icon fas fa-exclamation-circle" id="epi"></i>
+                            <small id="epass"></small>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"> <input type="submit" name="submit" id="submit" value="SUBMIT" class="btn">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+
+    <footer class="bottom-container">
+        <ul>
+            <li><a href="https://www.facebook.com/jaaahaaan"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/-jaahaan-/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://github.com/jaahaan"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+        <p>Copyright &copy; Nargish Jahan <span id="year"></span></p>
+    </footer>
+    <script src="../js/menu.js"></script>
+    <script src="../js/validation.js"></script>
+
+</body>
+
+</html>

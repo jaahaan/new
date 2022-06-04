@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/headerFooter.css">
+
+    <title>Registration</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"> <img src="../img/logo (3).png" alt="logo" id="logo">
+        </a>
+
+        <i class="fa fa-bars" onclick="showMenu()" id="show"></i>
+        <i class="fa fa-bars" onclick="hideMenu()" id="hide"></i>
+
+        <div class="nav-lists" id="navLinks">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Courses <i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="oop.html">OOP</a></li>
+                        <li><a href="java.html">JAVA</a></li>
+                        <li><a href="toc.html">TOC</a></li>
+                        <li><a href="ai.html">AI</a></li>
+                        <li><a href="ml.html">ML</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrap">
+
+        <div class="container">
+            <div class="header">
+                <h1>Registration</h1>
+            </div>
+            <form action="#" method="post" onsubmit="return formValidation()">
+                <table>
+                    <tr>
+                        <td><label for="fname">First Name</label></td>
+                        <td><input type="text" name="fname" id="fname"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="text-align: end;">
+                            <i class="err-icon fas fa-exclamation-circle" id="efi"></i>
+                            <small id="efname"></small>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="lname">Last Name</label></td>
+                        <td><input type="text" name="lname" id="lname"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="text-align: end;">
+                            <i class="err-icon fas fa-exclamation-circle" id="eli"></i>
+                            <small id="elname"></small>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: end;">
+                            <i class="err-icon fas fa-exclamation-circle" id="eei"></i>
+                            <small id="eemail"></small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="mobile">Mobile</label></td>
+                        <td><input type="number" name="mobile" id="mobile"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: end;">
+                            <i class="err-icon fas fa-exclamation-circle" id="emi"></i>
+                            <small id="emobile"></small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">Password</label></td>
+                        <td><input type="password" name="pass" id="pass"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: end;">
+                            <i class="err-icon fas fa-exclamation-circle" id="epi"></i>
+                            <small id="epass"></small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cpass">Confirm Password</label></td>
+                        <td><input type="password" name="cpass" id="cpass"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: end;">
+                            <i class="err-icon fas fa-exclamation-circle" id="ecpi"></i>
+                            <small id="ecpass"></small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="certificate">Certificate</label></td>
+                        <td>
+                            <input type="checkbox" name="check-certificate" id="jsc" value="JSC" class="checkbox">
+                            <label>JSC</label>
+                            <input type="checkbox" name="check-certificate" id="ssc" value="SSC" class="checkbox">
+                            <label>SSC</label>
+                            <input type="checkbox" name="check-certificate" id="hsc" value="HSC" class="checkbox">
+                            <label>HSC</label>
+                            <input type="checkbox" name="check-certificate" id="bsc" value="BSc" class="checkbox">
+                            <label>BSc</label>
+                            <input type="checkbox" name="check-certificate" id="msc" value="MSc" class="checkbox">
+                            <label>MSc</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: end;"><small id="echeck"></small></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender</label></td>
+                        <td>
+                            <input type="radio" name="gender" value="Male" class="checkbox">
+                            <label>Male</label>
+                            <input type="radio" name="gender" value="Frmale" class="checkbox">
+                            <label>Female</label>
+                            <input type="radio" name="gender" value="Others" class="checkbox">
+                            <label>Others</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="board">Board Name</label></td>
+                        <td>
+                            <select name="board-name" id="board-name">
+                                <option value="">Choose a board</option>
+                                <option value="Sylhet">Sylhet</option>
+                                <option value="Dhaka">Dhaka</option>
+                                <option value="Chottogram">Chottogram</option>
+                                <option value="Barisal">Barisal</option>
+                                <option value="Cumilla">Cumilla</option>
+                                <option value="Rajsahi">Rajsahi</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="dob">Date Of Birth</label></td>
+                        <td>
+                            <input type="date" name="dob" id="dob">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pic-up">Upload Picture</label></td>
+                        <td><input type="file" name="pic-up" id="pic-up"></td>
+                        <td><small id="epic"></small></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"> <input type="submit" name="submit" id="submit" value="SUBMIT" class="btn">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <footer class="bottom-container">
+        <ul>
+            <li><a href="https://www.facebook.com/jaaahaaan"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/-jaahaan-/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://github.com/jaahaan"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+        <p>Copyright &copy; Nargish Jahan <span id="year"></span></p>
+    </footer>
+    <script src="../js/menu.js"></script>
+    <script src="../js/validation.js"></script>
+
+</body>
+
+</html>
